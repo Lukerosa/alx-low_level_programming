@@ -1,16 +1,27 @@
 #include "main.h"
 
 /**
- * _isupper - Entry point
- * Description: Checks for uppercase character
- * @c: Integer variable
- * Return: 1 if uppercase, 0 if not
+ * more_numbers - Entry point
+ * Description: Prints 10 times the numbers, from 0 to 14
+ * Return: void
  */
 
-int _isupper(int c)
+void more_numbers(void)
 {
-	if (c >= 65 && c <= 90)
-		return (1);
-	else
-		return (0);
+	int i, j, tens, unit;
+
+	for (i = 0; i < 10; i++)
+	{
+		for (j = 0; j < 15; j++)
+		{
+			tens = j / 10;
+			unit = j % 10;
+			if (j >= 10)
+			{
+				_putchar(tens + '0');
+			}
+			_putchar(unit + '0');
+		}
+		_putchar('\n');
+	}
 }

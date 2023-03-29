@@ -1,27 +1,29 @@
 #include "main.h"
 
 /**
- * *_strcat - Entry point
+ * *_strncat - Entry point
  * Description: Concatenates two strings
- * @dest: Character
- * @src: Character
- * Return: char
+ * @dest: char
+ * @src: char
+ * @n: Integer
+ * Return: 0
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	char *p = dest;
 
+	/* Find the end of dest */
 	while (*p != '\0')
 	{
 		p++;
 	}
-	while (*src != '\0')
+	/* Append up to n bytes from src */
+	while (*src != '\0' && n-- > 0)
 	{
-		*p = *src;
-		p++;
-		src++;
+		*p++ = *src++;
 	}
+	/* Add a null terminator to dest */
 	*p = '\0';
 	return (dest);
 }

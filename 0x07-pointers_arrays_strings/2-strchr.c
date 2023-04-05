@@ -12,13 +12,13 @@ char *_strchr(char *s, char c)
 	{
 		if (*s == c)
 		{
-			return (s); // return the pointer to the character if found
+			return (s);
 		}
 		s++;
 	}
 	if (c == '\0')
 	{
-		return (s); // return the pointer to the null terminator if c is null terminator
+		return (s);
 	}
-	return (NULL); // return NULL if character is not found
+	return (NULL);
 }

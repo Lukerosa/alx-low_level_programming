@@ -7,11 +7,11 @@
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	char *ans = dest; // Store the initial value of dest in ans
+	char *ans = dest; /* Store the initial value of dest in ans */
 
 	while (n--)
 	{
-		*dest++ = *src++; // Copy one byte from src to dest
+		*dest++ = *src++; /* Copy one byte from src to dest */
 	}
-	return (ans); // Return the original destination pointer
+	return (ans); /* Return the original destination pointer */
 }

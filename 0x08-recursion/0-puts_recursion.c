@@ -1,12 +1,18 @@
 #include "main.h"
 
-void printString(char *str)
+/**
+ *_puts_recursion is the entry point
+ *details - prints a string then new line
+ *@s - character
+ */
+
+void_puts_recursion(char *s)
 {
-	if (*str == '\0')
+	if (*s == '\0')
 	{
-		printf("\n");
+		_putchar("\n");
 		return;
 	}
-	printf("%c", *str);
-	printString(str + 1);
+	_putchar(*s);
+	_puts_recursion(s + 1);
 }

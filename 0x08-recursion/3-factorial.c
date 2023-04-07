@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * factorial - this is the entry point
  * Details: code returns the factor of a number
@@ -8,11 +10,12 @@
 int factorial(int n)
 {
     int result = 1;
-    if (n < 0)  // negative number case
+    int i;
+    if (n < 0)
     {
         return -1;
     }
-    for (int i = 1; i <= n; i++) // loop to calculate factorial
+    for (i = 1; i <= n; i++)
     {
         result *= i;
     }

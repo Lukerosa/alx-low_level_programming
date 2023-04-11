@@ -9,15 +9,9 @@
  * return: 0
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-    int count = 0;
-
-    while (*++argv != NULL) {
-        count++;
-    }
-
-    printf("%d\n", count);
-
-    return 0;
+	(void) argv; /*ignore argv*/
+	printf("%d\n", argc - 1);
+	return (0);
 }

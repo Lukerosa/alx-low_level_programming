@@ -6,7 +6,7 @@
  * description: print arguments passed number
  * @argc: number of command line arguments
  * @argv: name of array
- * return: 0
+ * Return: 0
  */
 
 int main(int argc, char *argv[])

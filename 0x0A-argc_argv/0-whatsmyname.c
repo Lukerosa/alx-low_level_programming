@@ -6,7 +6,7 @@
  * description: it prints the name of the programme
  * @argc: number of commandline arguments
  * @argv: the name of the array
- * return: 0
+ * Return: 0
  */
 
 int main(int argc, char *argv[])

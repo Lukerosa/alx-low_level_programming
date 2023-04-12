@@ -3,7 +3,7 @@
 
 /**
  * *create_array - Entry point
- * Description: Creates an array of chars and initializes
+ * Description: Creates an array of characters and initializes
  * @size: Unsigned int
  * @c: Character
  * Return: array

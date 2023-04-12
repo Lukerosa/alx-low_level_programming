@@ -2,33 +2,22 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - Entry point
- * Description: Returns a pointer to a 2-D array of integers
- * @width: Integer
+ * free_grid - Entry point
+ * Description: Frees a 2-D grid previously created by your alloc_grid function
+ * @grid: Integer
  * @height: Integer
- * Return: int
+ * Return: Int
  */
 
-int** alloc_grid(int width, int height)
+void free_grid(int **grid, int height)
 {
-    if (width <= 0 || height <= 0) {
-        return NULL;
-    }
+	int i;
 
-    int** grid = (int**) calloc(height, sizeof(int*));
-    if (grid == NULL) {
-        return NULL;
-    }
-
-    for (int i = 0; i < height; ++i) {
-        grid[i] = (int*) calloc(width, sizeof(int));
-        if (grid[i] == NULL) {
-            for (int j = i - 1; j >= 0; --j) {
-                free(grid[j]);
-            }
-            free(grid);
-            return NULL;
-        }
-    }
-    return grid;
+	for (i = 0; i < height; i++)
+	{
+		free(grid[i]);
+		/* Free each row of the grid */
+	}
+	free(grid);
+	/* Frees the grid */
 }

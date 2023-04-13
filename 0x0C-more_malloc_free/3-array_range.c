@@ -17,9 +17,9 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	/* Calculate the size of the array */
+
 	size = max - min + 1;
-	/* Allocate memory for the array */
+
 	arr = malloc(size * sizeof(int));
 
 	if (arr == NULL)
@@ -30,7 +30,7 @@ int *array_range(int min, int max)
 	for (i = 0; i < size; i++)
 	{
 		arr[i] = min + i;
-		/* Fill the array with values from min to max */
+        
 	}
 	return (arr);
 }

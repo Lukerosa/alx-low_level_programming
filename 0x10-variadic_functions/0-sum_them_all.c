@@ -11,7 +11,7 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	va_list args;
+	va_list pars;
 	int sum = 0;
 	unsigned int p;
 
@@ -19,7 +19,7 @@ int sum_them_all(const unsigned int n, ...)
 	{
 		return (0);
 	}
-	va_start(parss, n);
+	va_start(pars, n);
 	for (p = 0; p < n; p++)
 	{
 		sum += va_arg(pars, int);
